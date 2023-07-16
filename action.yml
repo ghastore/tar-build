@@ -1,0 +1,31 @@
+name: "TAR Builder"
+author: "iHub TO <mail@ihub.to>"
+description: "GitHub Action for build TAR."
+branding:
+  icon: "archive"
+  color: "blue"
+inputs:
+  git_repo_src:
+    description: "Git Repository (Source)"
+    required: true
+  git_repo_dst:
+    description: "Git Repository (Destination)"
+    required: true
+  git_user:
+    description: "Git User"
+    required: true
+  git_email:
+    description: "Git E-mail"
+    required: true
+  git_token:
+    description: "Git Token"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.git_repo_src }}
+    - ${{ inputs.git_repo_dst }}
+    - ${{ inputs.git_user }}
+    - ${{ inputs.git_email }}
+    - ${{ inputs.git_token }}

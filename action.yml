@@ -1,5 +1,5 @@
 name: "TAR Builder"
-author: "iHub TO <mail@ihub.to>"
+author: "Kai Kimera <mail@kai.kim>"
 description: "GitHub Action for build TAR."
 branding:
   icon: "archive"
